@@ -51,7 +51,7 @@ function _auto_notify_message() {
 
     if [[ "$platform" == "Linux" ]]; then
         local urgency="normal"
-        local transient="--transient"
+        local transient="--hint=int:transient:1"
         if [[ "$exit_code" != "0" ]]; then
             urgency="critical"
             transient=""
